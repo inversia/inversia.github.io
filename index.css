@@ -1,7 +1,7 @@
 body {
     font-family: 'Museo';
     /* background-color:#274441; */
-    background-color:#204848;
+    background-color:#1d3f3f;
 }
 
 div {
@@ -643,7 +643,7 @@ p:last-child {
     }
 
         .complex h4 {
-            color:#2c4c49;
+            color:#214848;
             font-size:30px;
             font-weight:700;
             line-height:0.75em;
@@ -1012,7 +1012,7 @@ p:last-child {
     height: 0;
     border-style: solid;
     border-width: 10px 20px 0 20px;
-    border-color: #274341 transparent transparent transparent;
+    border-color: #1d4040 transparent transparent transparent;
 }
 
 .complexServices{
@@ -1128,3 +1128,22 @@ p:last-child {
         .complexServices .item.support .block h2 {
             font-size: 59px;
         }
+
+.basement{
+    color:#fff9e7;
+    text-shadow:1px 2px 4px rgba(0,0,0,0.5);
+}
+
+    .basement h1{
+        font-size:60px;
+        text-align:center;
+        padding-bottom:1.5em;
+    }
+
+    .basement h2{
+        font-size:20px;
+        font-weight:100;
+        padding:0px 50px 20px 50px;
+        margin-bottom:50px;
+
+    }
