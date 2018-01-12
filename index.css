@@ -503,6 +503,7 @@ p:last-child {
             position: relative;
             letter-spacing: -0.03em;
             font-size:40px;
+            font-weight:300;
         }
 
             .info-item .price:before,
