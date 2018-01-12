@@ -518,6 +518,8 @@ p:last-child {
                 content: 'от';
                 margin-right:0.3em;
                 margin-left:-1.4em;
+                opacity: 0.5;
+                color: gray;
             }
 
             .info-item .price:after {
