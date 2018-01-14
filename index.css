@@ -198,15 +198,10 @@ p:last-child {
     }
 
     .intro .methods {
-        margin: 0px 0px 0px 260px;
-        padding-left:00px;
-        font-weight:100;
-        font-size:25px;
-        color:#766E6E;
-        background-image:url(/art/methods.svg);
-        background-size:420px;
-        background-position: 0px 0px;
-        text-align:left;
+        background-image:url(/art/methods.svg);   
+        background-position: 0px center;
+        padding-left: 360px;
+        box-sizing:border-box;
         /* border: 4px solid #f530f5; */
     }
 
