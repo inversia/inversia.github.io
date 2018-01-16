@@ -40,7 +40,7 @@ function scrollTo (hash) {                                              // к п
 
 document.addEventListener ('DOMContentLoaded', () => { // код выполняющийся после загрузки DOM-дерева (содержимого document.body)
 
-    for (const menuItem of document.querySelectorAll ('#menu .item')) { // для каждого элемента с селектором #menu .item
+    for (const menuItem of document.querySelectorAll ('#menu .item', 'a')) { // для каждого элемента с селектором #menu .item
 
         menuItem.addEventListener ('click', e => {
 

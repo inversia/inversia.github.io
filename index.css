@@ -2,7 +2,7 @@ body {
     font-family: 'Museo';
     /* background-color:#274441; */
     background-color:#1d3f3f;
-}
+}    
 
 div {
     box-sizing:border-box;
@@ -126,6 +126,11 @@ strong {
                 color: #FFF9E7;
             }
 
+a {
+    text-decoration: none;
+    color:#3ead95;
+}
+
 p, ul {
     font-weight:300;
     font-size: 25px;
@@ -198,9 +203,11 @@ p:last-child {
     }
 
     .intro .methods {
+        margin-top:-50px;
         background-image:url(/art/us.svg);   
         background-position: 0px center;
         padding-left: 360px;
+        padding-bottom:108px;
         box-sizing:border-box;
         /* border: 4px solid #f530f5; */
     }
@@ -1139,5 +1146,5 @@ p:last-child {
         font-size:15px;
         font-weight:100;
         margin-left:50px;
-        margin-top:30px;   
+        margin-top:15px;   
     }
