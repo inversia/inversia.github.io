@@ -198,7 +198,7 @@ p:last-child {
     }
 
     .intro .methods {
-        background-image:url(/art/methods.svg);   
+        background-image:url(/art/us.svg);   
         background-position: 0px center;
         padding-left: 360px;
         box-sizing:border-box;
@@ -1139,7 +1139,5 @@ p:last-child {
         font-size:15px;
         font-weight:100;
         margin-left:50px;
-        margin-top:30px;
-   
-
+        margin-top:30px;   
     }
