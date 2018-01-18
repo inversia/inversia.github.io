@@ -100,7 +100,12 @@ strong {
                 background-repeat:no-repeat;
                 background-position:center;
                 background-size:contain;
+                transition: all 0.25s ease-in-out;
             }
+
+                .logo:hover {
+                    transform:scale(1.1);
+                }
 
             .tagline {
                 font-size: 35px;
@@ -195,6 +200,7 @@ p:last-child {
 
     .intro .why {
         margin-top:-50px;
+        margin-bottom:-50px;
         padding-right: 360px;
         box-sizing:border-box;
         background-image:url(/art/why.svg);
@@ -203,8 +209,8 @@ p:last-child {
     }
 
     .intro .methods {
-        margin-top:-50px;
-        background-image:url(/art/us.svg);   
+        /* margin-top:-50px; */
+        background-image:url(/art/us.svg);
         background-position: 0px center;
         padding-left: 360px;
         padding-bottom:108px;
@@ -228,17 +234,15 @@ p:last-child {
     /* border: 4px solid magenta; */
     text-align:center;
 }
-    
+
     .section h1 {
         text-transform: uppercase;
         font-weight:300;
-
     }
     
     .section h1 em {
         font-size:120%;
         font-weight:600;
-
     }
 
     .section h1::first-letter {
@@ -331,22 +335,20 @@ p:last-child {
 
 .aor h2 {
     font-weight:700;
-    font-size: 35px;
+    font-size: 39px;
     color:#204848;
     padding:2.5em;
     text-align:center;
 }
 
     .aor h2.packets{
-    font-weight:700;
-    font-size: 39px;
-    color:#fff9e7;
-    padding:2.5em;
-    text-align:center;
-    background-color: 204848;
-    letter-spacing:0.001em;
-    box-shadow: inset 0px 0px 150px rgba(0,0,0,0.25);
-    text-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+        color:#fff9e7;
+        padding:2.5em;
+        text-align:center;
+        background-color: 204848;
+        letter-spacing:0.001em;
+        box-shadow: inset 0px 0px 150px rgba(0,0,0,0.25);
+        text-shadow: 1px 2px 4px rgba(0,0,0,0.5);
     }
 
 .services {
@@ -468,7 +470,6 @@ p:last-child {
         background-repeat:no-repeat;
         background-position-y: 130px;
         background-size:150px;
-
     }
 
     .info-item:nth-child(even) .block {
@@ -482,7 +483,7 @@ p:last-child {
     }
 
         .info-item p{
-            font-size:16px;
+            font-size:19px;
             hyphens:auto;
         }
 
@@ -493,6 +494,7 @@ p:last-child {
             font-weight:600;
             font-size: 35px;
         }
+
         .info-item:nth-child(odd) h2 {
             text-align:left;
         }
@@ -553,16 +555,22 @@ p:last-child {
     .info-item.negative .block{
         background-image:url(/art/negative.svg);
         min-height:400px;
-        background-position-y: 120px;
+        background-position-y: center;
         background-size:205px;
 
     }
 
     .info-item.content .block{
         background-image:url(/art/content.svg);
-        background-position-y: 110px;
+        background-position-y: center;
         background-size:180px;
     }
+
+        .info-item.content .p.link {         <!--БЛЯ-->
+            transform:scale(1.1);
+        
+        }
+
 
     .info-item.questions .block{
         background-image:url(/art/question.svg);
@@ -586,14 +594,14 @@ p:last-child {
 
     .info-item.telegram .block{
         background-image:url(/art/telegram.svg);
-        background-position-y: 110px;
-        background-size:225px;
+        background-position-x: 670px;
+        background-size:265px;
     }
 
     .info-item.evangelist .block{
         background-image:url(/art/evangelist.svg);
-        background-position-y: 95px;
-        background-size:205px;
+        background-position-y: 150px;
+        background-size:200px;
     }
 
     .info-item.specialiste .block{
@@ -677,6 +685,15 @@ p:last-child {
                 color:#766e6e;
                 font-size:22px;
                 letter-spacing:0.02em;
+            }
+
+            .complex .price{
+                color:#204848;
+                text-align:center;
+                letter-spacing: -0.03em;
+                font-size:40px;
+                font-weight:300;
+                margin-top:2em;
             }
 
 
@@ -1129,22 +1146,38 @@ p:last-child {
             font-size: 59px;
         }
 
-.basement{
+.basement {
     color:#fff9e7;
     text-shadow:1px 2px 4px rgba(0,0,0,0.5);
-    padding-bottom:50px
+    text-align:center;
+    font-size:30px;
+
 
 }
 
-    .basement h1{
-        font-size:70px;
-        text-align:center;
+    .basement h1 {
+        font-size:30px;
         padding-bottom:1em;
+        font-size:70px;
+
     }
 
-    .basement h2{
-        font-size:15px;
+    .basement h2 {
+        font-size:10px;
         font-weight:100;
         margin-left:50px;
-        margin-top:15px;   
+        margin-top:45px; 
+        opacity:0.8;  
+        text-align:left;
+        
     }
+
+       .basement h2:last-child{
+           margin-bottom:50px;
+           margin-top:15px; 
+       }
+
+        .basement a {
+            color:#fff9e7;
+        }
+

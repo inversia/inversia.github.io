@@ -40,7 +40,7 @@ function scrollTo (hash) {                                              // к п
 
 document.addEventListener ('DOMContentLoaded', () => { // код выполняющийся после загрузки DOM-дерева (содержимого document.body)
 
-    for (const menuItem of document.querySelectorAll ('#menu .item', 'a')) { // для каждого элемента с селектором #menu .item
+    for (const menuItem of document.querySelectorAll ('#menu .item')) { // для каждого элемента с селектором #menu .item
 
         menuItem.addEventListener ('click', e => {
 
@@ -51,6 +51,25 @@ document.addEventListener ('DOMContentLoaded', () => { // код выполня�
                 history.pushState (null, null, hash)    // заменяем в адресной строке адрес на /#services (но так, чтобы страница не прыгала к этому элементу)
                 scrollTo (hash)                         // плавно прокручиваем страницу к #services
                 e.preventDefault ()                     // предотвращаем дефолтное поведение клика на ссылку (чтобы страница не прыгала к #services)
+            }
+        })
+    }
+})
+
+
+document.addEventListener ('DOMContentLoaded', () => {
+
+    for ( const link of document.querySelectorAll ('.link')) {
+
+        link.addEventListener ('click', x => {
+            
+            const href = link.getAttribute ('href')
+            const hash = href.replace ('/', '')
+
+            if (document.querySelector (hash)) {        
+                history.pushState (null, null, hash)    
+                scrollTo (hash)                         
+                x.preventDefault ()                     
             }
         })
     }
