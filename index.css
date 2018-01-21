@@ -503,7 +503,7 @@ p:last-child {
             text-align:left;
         }
 
-        .info-item .price{
+        .info-item .price {
             
             color:#204848;
             
@@ -514,13 +514,14 @@ p:last-child {
         }
 
             .info-item .price:before,
-            .info-item .price:after {
+            .info-item .price .rub,
+            .info-item .price .per {
                 top: -0.15em;
                 font-size: 22px;
                 position:relative;
             }
 
-            .info-item .price:before {
+            .info-item .price.from:before {
                 content: 'от';
                 margin-right:0.3em;
                 margin-left:-1.4em;
@@ -528,10 +529,16 @@ p:last-child {
                 color: gray;
             }
 
-            .info-item .price:after {
-                content: '₽';
+            .info-item .price .rub {
                 margin-left:0.3em;
             }
+
+            .info-item .price .per {
+                margin-left: 1em;
+                opacity:0.75;
+            }
+
+           
 
 
     .info-item.ORM .block {
