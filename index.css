@@ -595,7 +595,7 @@ p:last-child {
     .info-item.presentation3 .block{
         background-image:url(/art/presentation3.svg);
         min-height:400px;
-        background-position-y: 120px;
+        background-position-y: center;
         background-size:180px;
     }
 
@@ -619,13 +619,13 @@ p:last-child {
 
     .info-item.strategy .block{
         background-image:url(/art/strategy.svg);
-        background-position-y: 75px;
+        background-position-y: center;
         background-size:180px;
     }
 
     .info-item.analytic .block{
         background-image:url(/art/analytic.svg);
-        background-position-y: 103px;
+        background-position-y: center;
         background-size:180px;
     }
 
