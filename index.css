@@ -589,8 +589,8 @@ p:last-child {
     .info-item.search .block{
         background-image:url(/art/search.svg);
         /* min-height:400px; */
-        background-position-y: 120px;
-        background-size:150px;
+        background-position-y: center;
+        background-size:180px;
     }
 
     .info-item.presentation3 .block{
