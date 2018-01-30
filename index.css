@@ -205,11 +205,11 @@ p:last-child {
         padding-right: 360px;
         box-sizing:border-box;
         background-image:url(/art/why.svg);
-        background-position: right 155px;
+        background-position: right center;
         
     }
 
-    .intro .methods {
+    .intro .about {
         /* margin-top:-50px; */
         background-image:url(/art/us.svg);
         background-position: 0px center;
@@ -219,9 +219,15 @@ p:last-child {
         /* border: 4px solid #f530f5; */
     }
 
-    .intro .tendention{
-        font-weight:500;
-        color:#204848
+    .intro .products {
+        /* margin-top:-50px; */
+        background-image:url(/art/us.svg);
+        background-position: 0px center;
+        padding-right: 360px;
+        padding-bottom:108px;
+        box-sizing:border-box;
+        background-position:right center;
+        /* border: 4px solid #f530f5; */
     }
 
 .section {
