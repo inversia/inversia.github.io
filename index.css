@@ -1,8 +1,7 @@
 body {
     font-family: 'Museo';
-    /* background-color:#274441; */
-    background-color:#214747;
-    
+    background-color: #274441;
+    background-color: #214747;
 }    
 
 div {
@@ -17,7 +16,7 @@ strong {
     background:#FFFDF7;
 }
 
-.ribbon > div:nth-child(even) {
+.ribbon > div:nth-child(odd) {
     background-color:#d8d8d824;
 }
 
@@ -145,7 +144,7 @@ p, ul {
     text-align:justify;
     hyphens:auto;
     margin-bottom:2em;
-    margin-top:-0.5em;
+    /* margin-top:-0.5em; */
     box-sizing: border-box;
 }
 
@@ -608,7 +607,8 @@ p:last-child {
 
     .info-item.telegram .block{
         background-image:url(/art/telegram.svg);
-        background-position-x: 670px;
+        background-position-y: 295px;;
+        background-position-x: -30px;
         background-size:265px;
     }
 
@@ -648,7 +648,11 @@ p:last-child {
         background-size:160px;
     }
 
-
+    .info-item.monitoring .block{
+        background-image:url(/art/monitoring3.svg);
+        background-position-y: center;
+        background-size:200px;
+    }
 
     
 
@@ -1195,3 +1199,67 @@ p:last-child {
             color:#fff9e7;
         }
 
+.expandable {
+  margin-top:50px;
+  max-height: 300px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.5s cubic-bezier(0.42, 0, 0.77, 0.4);
+  padding-bottom:70px;
+}
+
+.expandable.expanded {
+  max-height: 1800px;
+
+}
+
+/* .expandable:nth-child(odd){
+    background-color: #f9f7f2;
+}
+
+.expandable:nth-child(even){
+    background-color: #fffdf7;
+} */
+
+.expandable:not(.expanded) {
+  user-select: none;
+  cursor: pointer;
+}
+
+.expandable:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255, 253, 247, 0) 0%, rgb(240, 0, 255) 95%); 
+  opacity: 1;
+  transition: opacity 0.5s cubic-bezier(0.42, 0, 0.5, 1.04);
+}
+
+.info-item:nth-child(even) .expandable:before {
+    background: linear-gradient(to bottom, #fffdf700 0%, #fffdf7ff 95%); 
+}
+
+.info-item:nth-child(odd) .expandable:before {
+    background: linear-gradient(to bottom, #f9f7f200 0%, #f9f7f2ff 95%); 
+}
+
+.expandable.expanded:before {
+  opacity: 0;
+}
+
+.expandable:not(.expanded):after {
+  content: 'развернуть ▽';
+  color:#204848;
+  position: absolute;
+  bottom: 0px;
+  left:0px;
+  right:0px;
+  text-align: right;
+  opacity: 0.65;
+}
