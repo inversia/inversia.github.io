@@ -488,9 +488,19 @@ p:last-child {
         padding-right: 280px;
     }
 
-        .info-item p{
+        .info-item p,
+        .info-item ul {
             font-size:19px;
             hyphens:auto;
+        }
+
+        .info-item li {
+        }
+
+        .info-item li:before {
+            content: '•';
+            margin-right: 1em;
+            color: #204848;
         }
 
         .info-item h2{
@@ -1236,7 +1246,7 @@ p:last-child {
   top: 0;
   left: 0;
   pointer-events: none;
-  background: linear-gradient(to bottom, rgba(255, 253, 247, 0) 0%, rgb(240, 0, 255) 95%); 
+  background: linear-gradient(to bottom, rgba(255, 253, 247, 0) 0%, rgb(255, 253, 247) 95%); 
   opacity: 1;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.5, 1.04);
 }
