@@ -1254,11 +1254,15 @@ p:last-child {
 }
 
 .expandable:not(.expanded):after {
-  content: 'развернуть ▽';
+  content: '';
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.0' x='0px' y='0px' viewBox='0 0 32 40' enable-background='new 0 0 32 32' xml:space='preserve'%3e%3cpolygon points='31.355,15.082 16,28.57 0.645,15.082 2.625,12.828 16,24.577 29.375,12.828 '/%3e%3cpolygon points='31.355,5.684 16,19.171 0.645,5.684 2.625,3.43 16,15.178 29.375,3.43 '/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 100%;
   color:#204848;
   position: absolute;
+  height:40px;
+  width:40px;
   bottom: 0px;
-  left:0px;
   right:0px;
   text-align: right;
   opacity: 0.65;
