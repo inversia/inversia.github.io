@@ -232,8 +232,7 @@ p:last-child {
 .section {
     font-weight:700;
     font-size: 72px;
-    /* background: #204848; */
-    background: #204848;        
+    background-color: #204848;
     color: #FFF9E7;
     text-shadow: 1px 2px 4px rgba(0,0,0,0.5);
     padding: 2em 0;
