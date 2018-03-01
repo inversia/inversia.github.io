@@ -473,7 +473,7 @@ p:last-child {
     .info-item .block{
         padding: 100px 0;
         background-repeat:no-repeat;
-        background-position-y: 130px;
+        background-position-y: center;
         background-size:150px;
     }
 
@@ -629,7 +629,7 @@ p:last-child {
 
     .info-item.specialiste .block{
         background-image:url(/art/specialiste.svg);
-        background-position-y: 45px;
+        background-position-y: center;
         background-size:205px;
     }
 
