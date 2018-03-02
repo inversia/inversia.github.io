@@ -494,11 +494,19 @@ p:last-child {
         }
 
         .info-item li {
+            padding-left: 1.5em;
+            position:relative;
+            text-align: left;
+        }
+
+        .info-item ul:not(.single-line-items) li {
+            margin-bottom: 0.8em;   
         }
 
         .info-item li:before {
             content: '•';
-            margin-right: 1em;
+            position: absolute;
+            left: 0;
             color: #204848;
         }
 

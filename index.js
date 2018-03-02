@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener ('DOMContentLoaded', ()=>{
 
     const menu = document.getElementById('menu')
     const maxDistance = window.innerHeight * 1
 
     let lastScrollY = window.scrollY
 
-    window.addEventListener('scroll', e=>{
+    window.addEventListener ('scroll', e=>{
 
         const scrollDelta = window.scrollY - lastScrollY
         const isScrollingDown = scrollDelta > 0
@@ -103,3 +103,35 @@ document.addEventListener ('DOMContentLoaded', () => {
         })
     }
 })
+
+
+/* Ингредиенты:
+
+	1.	document.querySelectorAll ('селектор') – запрашивает все элементы на странице, попадающие под переданный CSS-селектор (возвращает псевдо-массив)
+	2.	[...что-нибудь] 					   — превращает что-нибудь в массив (например если это псевдо-массив), у которого есть все методы массива (map/reduce и так далее)
+	3.  массив.reduce ((a, b) => a + b, 0) 	   – склеивает все элементы массива переданной функцией, слева направо, начиная с нулевого элемента
+	4.  { ...объект, [ключ]: значение }        — создаёт новый объект, образованный из склейки «объекта» и пары ключ-значение, где ключ берется из переменной
+
+ Нужно получить: из полей формы на странице объект такого типа:
+
+ 	{name: "123123", phone: "dasdas", email: "fsfdf", reason: "hbjhuyhljnjkhkjlnjkvgfghjhjkhgfh0656768hgtrghy"} */
+ 	
+
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    
+    const button = document.querySelector ('form button')
+
+    if (button) {
+        
+        button.addEventListener ('click', event => {
+
+            const fields = [...document.querySelectorAll ('form input')].reduce ((obj, input) => ({...obj, [input.name]: input.value}), {})
+
+            alert (JSON.stringify (fields))
+
+            event.preventDefault ()
+        })
+    }
+})
+
