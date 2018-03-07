@@ -120,17 +120,44 @@ document.addEventListener ('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', ()=>{
     
+    const form = document.querySelector ('.form')
     const button = document.querySelector ('form button')
+    const inputs = [...document.querySelectorAll ('form input')]
 
     if (button) {
         
-        button.addEventListener ('click', event => {
-
-            const fields = [...document.querySelectorAll ('form input')].reduce ((obj, input) => ({...obj, [input.name]: input.value}), {})
-
-            alert (JSON.stringify (fields))
+        button.addEventListener ('click', async event => {
 
             event.preventDefault ()
+
+            const fields = inputs.reduce ((obj, input) => ({...obj, [input.name]: input.value}), {})
+           
+            if (!(fields.email || fields.phone)) {
+                alert ('Введите e-mail или телефон, чтобы мы могли связаться с вами.')
+            
+            } else {
+
+                try {
+
+                    form.classList.add ('wait')
+
+                    await fetch ('https://ykxypcgmw9.execute-api.eu-central-1.amazonaws.com/main', {
+
+                        method: 'POST',
+                        body: JSON.stringify (fields)
+                    })
+
+                    form.classList.remove ('wait')
+                    form.classList.add ('done')
+
+                    for (const input of inputs) input.disabled = true
+                    button.disabled = true
+
+                } catch (error) {
+                    alert (error.message)
+                    console.log (error)
+                }
+            }
         })
     }
 })

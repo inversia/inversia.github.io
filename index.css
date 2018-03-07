@@ -220,7 +220,7 @@ p:last-child {
 
     .intro .products {
         /* margin-top:-50px; */
-        background-image:url(/art/us.svg);
+        background-image:url(/art/group.svg);
         background-position: 0px center;
         padding-right: 360px;
         padding-bottom:108px;
@@ -921,13 +921,28 @@ p:last-child {
         letter-spacing:0.1em;
     }
 
-
 .form{
     position:relative;
     background:#FFF9E7;
     height:500px;
     margin-bottom:30vw;
 }
+
+@keyframes wait {
+    0%   { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    100% { transform: scale(0.9); }
+}
+
+.form.wait form {
+    pointer-events: none;
+    animation: wait 0.5s ease-in-out alternate infinite;
+}
+
     .form svg {
         z-index:101;
     }
@@ -986,6 +1001,11 @@ p:last-child {
 
         }
 
+        .form.done input {
+            opacity:0.35;
+            color:grey;
+        }
+
         .form input:focus {
            outline:none;
            border-bottom-width: 2px;
@@ -1006,11 +1026,31 @@ p:last-child {
             border-bottom:4px solid transparent;
         }
 
-        .form button:hover {
+        .form button:before {
+            content: 'Отправить';
+        }
+
+        .form.wait button:before {
+            content: 'Отправляется...';
+        }
+
+        .form.done button {
+            pointer-events: none;
+        }
+
+        .form.done button:before {
+            content: 'Отправлено!';
+        }
+
+        .form:not(.wait) button:hover {
             transform:scale(1.1);
             border-bottom:4px solid #1E6D66;
-
         }
+
+        .form.wait button {
+            animation: pulse 0.5s ease-in-out alternate infinite;
+        }
+
         
 .prices {    
     margin-top:100px;
