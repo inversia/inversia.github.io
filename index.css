@@ -966,6 +966,7 @@ p:last-child {
     .form .top {
         position:absolute;
         bottom:100%;
+        transform:translate(0, 0.5px);
     }
 
     .form .top polygon {
@@ -976,6 +977,7 @@ p:last-child {
         position:absolute;
         top:100%;
         z-index:-1;
+        transform:translate(0, -0.5px);
     }
 
     .form .fields {
