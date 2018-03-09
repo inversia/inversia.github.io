@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
             event.preventDefault ()
 
-            const fields = inputs.reduce ((obj, input) => ({...obj, [input.name]: input.value}), {})
+            const fields = inputs.reduce ((obj, input) => Object.assign (obj, { [input.name]: input.value }), {})
            
             if (!(fields.email || fields.phone)) {
                 alert ('Введите e-mail или телефон, чтобы мы могли связаться с вами.')
