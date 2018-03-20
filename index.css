@@ -624,7 +624,7 @@ p:last-child {
 
     .info-item.telegram .block{
         background-image:url(/art/telegram.svg);
-        background-position-y: 295px;;
+        background-position-y: center;
         background-position-x: -30px;
         background-size:265px;
     }
@@ -1264,7 +1264,7 @@ p:last-child {
 
 .expandable {
   margin-top:50px;
-  max-height: 300px;
+  max-height: 380px;
   overflow: hidden;
   position: relative;
   transition: max-height 0.5s cubic-bezier(0.42, 0, 0.77, 0.4);
