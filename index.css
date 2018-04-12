@@ -668,7 +668,7 @@ p:last-child {
     .info-item.monitoring .block{
         background-image:url(/art/monitoring3.svg);
         background-position-y: center;
-        background-size:200px;
+        /* background-size:200px; */
     }
 
     .info-item.content-placing .block{
