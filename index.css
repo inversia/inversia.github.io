@@ -1272,7 +1272,7 @@ p:last-child {
 }
 
 .expandable.expanded {
-  max-height: 1000px;
+  max-height: 1000px !important;
 
 }
 
