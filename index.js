@@ -3,7 +3,7 @@ document.addEventListener ('DOMContentLoaded', ()=>{
     const menu = document.getElementById('menu')
     const maxDistance = window.innerHeight * 1
 
-    let lastScrollY = window.scrollY
+    let lastScrollY = window.scrollY            //свойство только для чтения интерфейса Window. Возвращает число пикселей, на которое документ пролистали в данный момент по вертикали.
 
     window.addEventListener ('scroll', e=>{
 
@@ -35,58 +35,30 @@ document.addEventListener ('DOMContentLoaded', ()=>{
 
 // ------------- scroll
 
-function scrollTo(hash) {
-    // к примеру, hash = #services
-    const target = document.querySelector(hash)
-    // находим элемент по селектору #services
-    target.scrollIntoView({
+function scrollTo (hash) {                        // к примеру, hash = #services
+    const target = document.querySelector (hash)  // находим элемент по селектору #services
+    target.scrollIntoView ({                      // плавная прокрутка страницы к этому элементу
         behavior: 'smooth',
         block: 'start'
     })
-    // плавная прокрутка страницы к этому элементу
+    
 }
 
-document.addEventListener('DOMContentLoaded', ()=>{
-    // код выполняющийся после загрузки DOM-дерева (содержимого document.body)
 
-    for (const menuItem of document.querySelectorAll('#menu .item')) {
-        // для каждого элемента с селектором #menu .item
 
-        menuItem.addEventListener('click', e=>{
+document.addEventListener ('DOMContentLoaded', () => {          // код выполняющийся после загрузки DOM-дерева (содержимого document.body)
 
-            const href = menuItem.getAttribute('href')
-            // <a href="/#services"> → /#services
-            const hash = href.replace('/', '')
-            // /#services → #services
+    for (const link of document.querySelectorAll ('.link')) {   // для каждого элемента с селектором .link
 
-            if (document.querySelector(hash)) {
-                // есть ли на странице элемент отзывающийся на селектор #services
-                history.pushState(null, null, hash)
-                // заменяем в адресной строке адрес на /#services (но так, чтобы страница не прыгала к этому элементу)
-                scrollTo(hash)
-                // плавно прокручиваем страницу к #services
-                e.preventDefault()
-                // предотвращаем дефолтное поведение клика на ссылку (чтобы страница не прыгала к #services)
-            }
-        }
-        )
-    }
-}
-)
+        link.addEventListener ('click', x => {
 
-document.addEventListener ('DOMContentLoaded', ()=>{
+            const href = link.getAttribute('href')              // <a href="/#services"> → /#services
+            const hash = href.replace('/', '')                  // /#services → #services
 
-    for (const link of document.querySelectorAll('.link')) {
-
-        link.addEventListener ('click', x=> {
-
-            const href = link.getAttribute('href')
-            const hash = href.replace('/', '')
-
-            if (document.querySelector(hash)) {
-                history.pushState(null, null, hash)
-                scrollTo(hash)
-                x.preventDefault()
+            if (document.querySelector(hash)) {                 // есть ли на странице элемент отзывающийся на селектор #services
+                history.pushState(null, null, hash)             // заменяем в адресной строке адрес на /#services (но так, чтобы страница не прыгала к этому элементу)
+                scrollTo(hash)                                  // плавно прокручиваем страницу к #services
+                x.preventDefault()                              // предотвращаем дефолтное поведение клика на ссылку (чтобы страница не прыгала к #services)
             }
         })
     }
