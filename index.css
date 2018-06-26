@@ -1,7 +1,8 @@
 body {
     font-family: 'Museo';
-    background-color: #274441;
+    /*background-color: #274441;*/
     background-color: #173838;
+    min-width:1000px;
 }    
 
 div {
@@ -45,6 +46,7 @@ strong {
         z-index:1000;
         position:fixed;
         overflow:hidden;
+        min-width:1000px;
     }
 
     .menu:before {
@@ -119,7 +121,7 @@ strong {
             }
 
             .tagline h1 {
-                font-size: 40.2px;
+                font-size: 43.5px;
                 white-space:nowrap;
                 font-weight:500;
                 color: #FFF9E7;
@@ -232,7 +234,7 @@ p:last-child {
 .section {
     font-weight:700;
     font-size: 72px;
-    background-color: #204848;
+    background-color: #173838;
     color: #FFF9E7;
     text-shadow: 1px 2px 4px rgba(0,0,0,0.5);
     padding: 2em 0;
@@ -350,7 +352,7 @@ p:last-child {
         color:#fff9e7;
         padding:2.5em;
         text-align:center;
-        background-color: 204848;
+        background-color: #173838;
         letter-spacing:0.001em;
         box-shadow: inset 0px 0px 150px rgba(0,0,0,0.25);
         text-shadow: 1px 2px 4px rgba(0,0,0,0.5);
