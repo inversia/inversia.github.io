@@ -231,6 +231,17 @@ p:last-child {
         /* border: 4px solid #f530f5; */
     }
 
+    .intro .notdo {
+        /* margin-top:-50px; */
+        background-image:url(/art/notdo.svg);
+        background-position: 0px center;
+        padding-left: 360px;
+        padding-bottom:108px;
+        box-sizing:border-box;
+        background-position:left center;
+        /* border: 4px solid #f530f5; */
+    }
+
 .section {
     font-weight:700;
     font-size: 72px;
