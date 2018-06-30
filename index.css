@@ -93,17 +93,32 @@ strong {
             align-items: center;
         }
 
+            @keyframes logo-appear {
+
+                0% { opacity: 0; left: 220px; transform:scale(0); }
+                50% { opacity: 1; left: 220px; transform:scale(1); }
+                80% { opacity: 1; left: 220px; transform:scale(1); }
+                100% { opacity: 1; left: 0; }
+            }
+
             .logo {
                 height: 100%;
                 min-width: 220px;
+                position:relative;
                 flex-direction:row;
                 align-items:center;
-                background-image:url(/art/Resurs1.svg);
+                background-image:url(http://serm.tech/art/Resurs1.svg);
                 background-repeat:no-repeat;
                 background-position:center;
                 background-size:contain;
                 transition: all 0.25s ease-in-out;
+                animation-fill-mode: forwards;
+                z-index:2;
+                animation: logo-appear 3s cubic-bezier(0.41, -0.18, 0.47, 1.38);
+
             }
+
+            
 
                 .logo:hover {
                     transform:scale(1.1);
@@ -133,8 +148,9 @@ strong {
                 white-space:nowrap;
                 font-weight:500;
                 color: #FFF9E7;
-                animation: tagline-h1-appear 1s ease-in-out;
-                animation-delay: 0.25s;
+                opacity:0;
+                animation: tagline-h1-appear 1.2s ease-in-out;
+                animation-delay: 2.6s;
                 animation-fill-mode: forwards;
             }
 
@@ -150,8 +166,8 @@ strong {
                 color: #FFF9E7;
                 position: relative;
                 opacity: 0;
-                animation: tagline-h2-appear 1s ease-in-out;
-                animation-delay: 0.25s;
+                animation: tagline-h2-appear 1.2s ease-in-out;
+                animation-delay: 2.6s;
                 animation-fill-mode: forwards;
             }
 
