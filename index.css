@@ -3,6 +3,7 @@ body {
     /*background-color: #274441;*/
     background-color: #173838;
     min-width:1000px;
+    overflow-x:hidden;
 }    
 
 div {
