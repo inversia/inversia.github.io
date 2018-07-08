@@ -133,18 +133,3 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
     }
 })
-
-document.addEventListener ('DOMContentLoaded', ()=>{
-    
-    const popItems = querySelectorAll('.intro, .info-item')
-
-    
-
-    for (const item of popItems){
-
-        item.addEventListener(scroll)
-
-        
-    }
-
-})
