@@ -133,21 +133,3 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
     }
 })
-
-document.addEventListener ('DOMContentLoaded', ()=>{
-    
-    const popItems = document.querySelectorAll('h2')
-   
-
-    for (const item of popItems){
-
-        item.addEventListener('scroll',() => {
-
-            
-            
-        })
-
-        
-    }
-
-})
